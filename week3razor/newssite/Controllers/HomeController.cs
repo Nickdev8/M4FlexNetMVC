@@ -17,10 +17,10 @@ public class HomeController : Controller
     {
         NewsItem item = new NewsItem()
         {
-            Title = "tit1";
-            Content = "ditis in ed contend"
+            Title = "tit1",
+            Content = "ditis in ed contend",
             ImageUrl = "/imgaes/1.png"
-        }
+        };
         return View(item);
     }
 
