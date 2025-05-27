@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using newssite.Models;
-
+using System.Text.Json;
 namespace newssite.Controllers;
 
 public class HomeController : Controller
@@ -14,18 +14,8 @@ public class HomeController : Controller
     {
         _logger = logger;
 
-        newsItems.Add(new NewsItem()
-        {
-            Title ="Dit bericht is nieuw",
-            Content="Lijstjes ook met newsitems",
-            ImageUrl = "img/newsitem.PNG"
-        });
-        newsItems.Add(new NewsItem()
-        {
-            Title = "Mijn eerste model",
-            Content="Was niet zo moeilijk om te maken",
-            ImageUrl = "img/newsitem.PNG"
-        });
+        string json = System.IO.File.ReadAllText("data/news.json");
+        newsItems = JsonSerializer.Deserialize<List<NewsItem>>(json);
     }
     public IActionResult Index()
     {
@@ -34,7 +24,9 @@ public class HomeController : Controller
 
     public IActionResult Privacy()
     {
-        return View();
+        Privacy model = new Privacy();
+        model.PolicyText = "pwlese dont stweel from meee :sadface:";
+        return View(model);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -1,0 +1,22 @@
+[
+    {
+        "Title": "JSON Dit bericht is nieuw",
+        "Content": "JSON Lijstjes ook met newsitems",
+        "ImageUrl": "img/newsitem.PNG"
+    },
+    {
+        "Title": "JSON Mijn eerste model",
+        "Content": "JSON Was niet zo moeilijk om te maken",
+        "ImageUrl": "img/newsitem.PNG"
+    },
+    {
+        "Title": "MHUHAHAHA",
+        "Content": "deze opdrachten zijn leuk, maar ik heb meer zin in react",
+        "ImageUrl": "img/newsitem.PNG"
+    },
+    {
+        "Title": "React + Tailwind = goated",
+        "Content": "deze opdrachten zijn leuk, maar ik heb meer zin in react",
+        "ImageUrl": "img/newsitem.PNG"
+    }
+]
