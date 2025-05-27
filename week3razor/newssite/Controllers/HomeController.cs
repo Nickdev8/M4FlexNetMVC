@@ -8,20 +8,28 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
+    private List<NewsItem> newsItems = new List<NewsItem>();
+
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-    }
 
+        newsItems.Add(new NewsItem()
+        {
+            Title ="Dit bericht is nieuw",
+            Content="Lijstjes ook met newsitems",
+            ImageUrl = "img/newsitem.PNG"
+        });
+        newsItems.Add(new NewsItem()
+        {
+            Title = "Mijn eerste model",
+            Content="Was niet zo moeilijk om te maken",
+            ImageUrl = "img/newsitem.PNG"
+        });
+    }
     public IActionResult Index()
     {
-        NewsItem item = new NewsItem()
-        {
-            Title = "tit1",
-            Content = "ditis in ed contend",
-            ImageUrl = "/imgaes/1.png"
-        };
-        return View(item);
+        return View(newsItems);
     }
 
     public IActionResult Privacy()

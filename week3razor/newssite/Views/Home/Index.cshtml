@@ -7,5 +7,12 @@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 <section>mijn nieuwe html ode</section>
-<section>@Model.Title</section>
 <img src="img/newsitem.PNG" alt="">
+
+
+@{
+    foreach (NewsItem item in Model)
+    {
+        <section>@item.Title</section>
+    }
+}
