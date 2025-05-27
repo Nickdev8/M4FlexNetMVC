@@ -28,6 +28,12 @@ public class HomeController : Controller
         model.PolicyText = "pwlese dont stweel from meee :sadface:";
         return View(model);
     }
+    public IActionResult MyGames()
+    {
+        MyGames model = new MyGames();
+        model.title = "thise is one of my games";
+        return View(model);
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
