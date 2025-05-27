@@ -6,13 +6,13 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-<section>mijn nieuwe html ode</section>
-<img src="img/newsitem.PNG" alt="">
 
 
 @{
     foreach (NewsItem item in Model)
     {
-        <section>@item.Title</section>
+        <h2>@item.Title</h2>
+        <section>@item.Content</section>
+        <img src="img/newsitem.PNG" alt="">
     }
 }
