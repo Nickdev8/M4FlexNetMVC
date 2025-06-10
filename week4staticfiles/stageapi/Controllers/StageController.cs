@@ -20,6 +20,7 @@ public class StageController : ControllerBase
         new Stage { BedrijfsNaam = "Code Creators", StageVergoeding = 550.00, Stad = "Eindhoven" }
     };
 
+
     public StageController(ILogger<StageController> logger)
     {
         _logger = logger;
