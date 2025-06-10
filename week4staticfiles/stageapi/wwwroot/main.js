@@ -20,6 +20,8 @@ function CreateHTMLForStage(stage, viewtemplate){
     let html = viewtemplate.replace('#BedrijfsNaam#', stage.bedrijfsNaam)
     .replace('#StageVergoeding#', stage.stageVergoeding)
     .replace('#Stad#', stage.stad)
+    .replace('#Beschrijving#', stage.beschrijving)
+    .replace('#img#', stage.img)
 }
 
 
